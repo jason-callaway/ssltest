@@ -61,15 +61,6 @@ Step 5 : CMD httpd-foreground
  ---> 288a037267d5
 Removing intermediate container 4802e1f8e6e9
 Successfully built 288a037267d5
-mbp:ssltest jason$ docker run -d -p 443:443 ssltest
-5ed699154838137b2b289e882a354fb652aa7d77426790b445a98695260c865e
-Error response from daemon: Cannot start container 5ed699154838137b2b289e882a354fb652aa7d77426790b445a98695260c865e: Bind for 0.0.0.0:443 failed: port is already allocated
-mbp:ssltest jason$ dka
--bash: dka: command not found
-mbp:ssltest jason$ dka.sh
-28c531b94778
-5ed699154838
-28c531b94778
 mbp:ssltest jason$ # Password is tcuser
 mbp:ssltest jason$ sudo ssh -f -T -N -L443:localhost:443 -l docker $(echo $DOCKER_HOST | cut -d ':' -f 2 | tr -d '/')
 docker@192.168.99.100's password:
